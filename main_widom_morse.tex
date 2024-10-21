@@ -1,0 +1,485 @@
+\documentclass[12pt,a4paper]{article}
+
+
+\usepackage[english]{babel}
+\usepackage[T2A]{fontenc}
+\usepackage[cp1251]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{amsfonts}
+\usepackage{wrapfig}
+\usepackage{caption}
+
+\usepackage{hyperref}
+\usepackage{physics}
+
+\textheight=26cm
+\textwidth=17cm
+\hoffset=0pt
+\voffset=0cm
+\oddsidemargin=0cm
+\topmargin=-60pt
+\footskip=30pt
+\renewcommand{\baselinestretch}{1}
+
+\newcommand{\no}{\nonumber}
+\newcommand{\non}{\nonumber \\}
+\newcommand{\ve}[1]{{\bf #1}}
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+\newcommand{\sli}{\sum\limits}
+\newcommand{\ili}{\int\limits}
+\newcommand{\lp}{\left (}
+\newcommand{\rp}{\right )}
+\newcommand{\lb}{\left [}
+\newcommand{\rb}{\right ]}
+\newcommand{\lbr}{\left \{}
+\newcommand{\rbr}{\right \}}
+\newcommand{\ld}{\left .}
+\newcommand{\rd}{\right .}
+\newcommand{\vk}{\vec{k}}
+\newcommand{\vl}{\vec{l}}
+\newcommand{\cB}{{\cal B}}
+\newcommand{\cM}{{\frak M}}
+\newcommand{\rhok}{\rho_{\vec{k}}}
+\newcommand{\rhomk}{\rho_{-\vec{k}}}
+\newcommand{\etak}{\eta_{\vec{k}}}
+\newcommand{\etamk}{\eta_{-\vec{k}}}
+
+\begin{document}
+
+\binoppenalty=10000
+\relpenalty=10000
+\begin{center}
+	\renewcommand{\theequation}{\arabic{section}}
+	\section*{Crossover line in the supercritical cell fluid model (I haven't thought up a good title yet)}
+	\setcounter{equation}{0}
+\end{center}
+
+\subsection*{Abstract}
+
+\section{Introduction}
+A supercritical fluid is a state of matter that occurs when a substance is subjected to temperatures and pressures above its critical point. Below the critical point the substance exhibits a liquid-gas coexistence. At the critical point, the distinction between the liquid and gas phases of a substance disappears, and beyond this point, the substance exists in a single continuous supercritical state. Despite the absence of first-order phase transitions above the critical point, fluids exhibit distinct liquid-like and gas-like structures under supercritical conditions, and display a unique mix of properties. With densities comparable to liquids they possess low viscosity and high diffusivity like gases resulting in high solvent power. Moreover, the supercritical properties are instantly tunable by changing pressure and temperature. This is the reason why supercritical fluids have diverse applications across various industries \cite{KnezEtAl2014}. 
+  
+In the context of supercritical fluids, the Widom line, Frenkel line, and percolation line are theoretical and physical constructs used to describe the complex behavior of fluids beyond the critical point.
+All three concepts provide a way to describe how fluids behave in the supercritical region, where the traditional liquid-gas phase distinction no longer applies.
+The Frenkel line \cite{BrykEtAl2017} focuses on the dynamics of molecular motion, separating regimes where the fluid behaves more like a liquid (with oscillatory molecular motion) from those where it behaves more like a gas (with only diffusive motion). The percolation line \cite{CampiEtAl2001} is related to spatial structures, marking the threshold where clusters of fluid or density fluctuations start forming a continuous, system-spanning network.
+
+In the present work we are particularly interested in the Widom line \cite{XuEtAl2005,McMillanStanley2010,SimeoniEtAl2010} which focuses on thermodynamic properties and represents a conditional boundary between liquid-like and gas-like regions in the supercritical fluid, based on response functions. Thus the Widom line \--- the locus of correlation length maxima emanating from the critical point \cite{XuEtAl2005}, is treated as the continuation of the coexistence line above the critical point.   
+Some thermodynamic response functions, for example, isobaric heat capacity and isothermal compressibility, also exhibit maxima in the supercritical region. In the critical region beyond the critical point the maxima lines of the correlation length and response functions virtually merge into a single line \cite{ArtemenkoEtAl2017} and then diverge from each other as the temperature rise. Thus in the critical region, the Widom line is viewed as the maxima locus of thermodynamic response functions \cite{Proctor2020Book}.
+
+% directly from the equation of state 
+[Here will be a small paragraph about challenges on developing the global equation of state directly predicting crossover line in supercritical fluids]
+% we would like to share an idea
+
+In Section~\ref{sec:eos}, we present the modified Morse potential used in our work, the explicit expression for the equation of state, and plot of pressure isotherms at temperatures below and above the critical one. In Section~\ref{sec:widom}, we display the Widom line as the maxima locus of the isothermal compressibility and introduce the supercritical crossover line obtained directly from the equation of state of the cell fluid model.  
+
+
+\section{\label{sec:eos}The equation of state: pressure as a function of temperature and chemical potential}
+
+In the present work we take advantage of the results obtained in \cite{KozlovskiiDobush2020,DobushEtAl2024}. In \cite{KozlovskiiDobush2020}, the phase space of collective variables%\footnote{The term "collective variables" is commonly used to refer to a specific category of variables unique to each physical system. In the context of liquid-vapour systems, these collective variables are linked to modes of density deviation from the critical density. This set of collective variables encompasses those which average values are connected to order parameters.Thus, the depiction of the phase transition within the phase space of collective variables appears compelling.} 
+is used for calculating the grand partition function of a cell fluid model in the zero-mode approximation and consequently deriving the explicit forms of the equation of state (EoS) both in pressure-temperature-chemical potential terms and pressure-temperature-density terms. The resulting EoSs are applicable in a wide range of temperatures below and above the critical point. In \cite{DobushEtAl2024}, we used these equations as the basis for the calculation and graphical representation of the thermodynamic response functions (isothermal compressibility, thermal pressure coefficient, thermal expansion) of the cell fluid model with modified Morse potential in the supercritical region.
+
+**************************************************************
+
+[The following is the literal copy (compilation) from our recent preprint on response functions. Perhaps we should rephrase it, or change it somehow. Please help.]
+
+**************************************************************
+
+The potential of interaction between particles is taken in a form of a modified Morse potential
+\begin{eqnarray}
+	\label{def:mod_morse}
+	U(r) & = & \varepsilon C_{H} \left[A {\rm e}^{-n_0(r-R_0)/\alpha} \right.
+	\nonumber\\
+	&& + \left. {\rm e}^{-\gamma(r - R_0)/\alpha} -2{\rm e}^{-(r-R_0)/\alpha}\right],
+\end{eqnarray}
+where $R_0$ is the coordinate of the potential minimum, $\alpha$ is an effective range of interaction, $\gamma$ and $n_0$ are parameters of the model. Other two constants $C_{H}$ and $A$ are expressed via $\gamma$ and $n_0$ as follows
+\begin{equation}
+	C_{H} = \frac{n_0}{n_0 + \gamma - 2}, \quad A = \frac{2 - \gamma}{n_0},
+\end{equation}
+where $\varepsilon$ is the depth of the potential well at $r=R_0$. Applying $\gamma=2$ reduce the  to the ordinary Morse potential~\cite{Morse1929} at $\gamma=2$. For a more detailed discussion of such modified Morse potential, see Sections~1 and~2 in~\cite{KozlovskiiDobush2020}.
+
+Our modification contains an additional repulsive term, which enables us to single out a reference system (in the reciprocal space) and apply the method of collective variables to calculating the grand partition function~\cite{KozlovskiiDobush2016}.
+
+%The explicit form of the equation of state in terms of chemical potential-temperature in the case of $T\geq T_c$ is as follows: 
+
+The equation of state obtained in~\cite{KozlovskiiDobush2020} reads
+\begin{equation}
+	\label{eq:eosMT}
+	Pv\beta = E_\mu(M, T) + M \bar \rho_0 + \frac{1}{2} d \bar \rho_0^2 - \frac{a_4}{24} \bar \rho_0^4.
+\end{equation}
+The quantities in the left-hand side of the equation are $P$, the pressure; $\beta = (k_{\rm B} T)^{-1}$, the inverse temperature; $k_{\rm B}$, the Boltzmann constant; $T$, the temperature; $v$, cell volume. The quantities in the right-hand side are, in general, functions of the temperature $T$ and the chemical potential $\mu$. Let us present their expressions explicitly.
+
+First, the quantity $M$ depends linearly on the chemical potential
+\begin{align}\label{chem_pot}
+	&	M = \frac{\tilde\mu}{W(0)} + g_1 - \frac{g_3}{g_4} d - \frac{1}{6} \frac{g_3^3}{g_4^2}, \\
+	&	\tilde\mu=\mu-\mu_0(1+\tau),
+\end{align}
+where $\mu_0$ is some positive constant, $\tau$ is the relative temperature $\tau = (T - T_c) / T_c$, $T_c$ is the critical temperature. We will call $M$ the effective chemical potential.
+
+The quantity $W(0)$ is expressed via parameters of the potential~(\ref{def:mod_morse}) as follows
+\begin{equation}
+	W(0) = \Phi^{(r)}(0) \left[ B - 1 + \chi_0 + \tau (\chi_0 + A_\gamma) \right],
+\end{equation}
+where
+\begin{align*} 
+	& B = 2 \gamma^3 e^{(1-\gamma)R_0/\alpha},
+	\nonumber \\
+	& A_\gamma = A e^{(n_0-\gamma)R_0/\alpha} \left( \gamma / n_0\right)^3, 
+\end{align*}
+and $\Phi^{(r)}(0)$ is the Fourier transform of the repulsive part of the potential at $\abs{\vb k}=0$
+\begin{equation*}
+	\Phi^{(r)}(0) = \varepsilon C_H 8\pi {\rm e}^{\gamma R_0/\alpha} \left(\frac{\alpha}{\gamma R_0}\right)^3.
+\end{equation*}
+
+The parameter $\chi_0$ is used in~\cite{KozlovskiiDobush2020} to single out a contribution in the Fourier transform of the potential that is treated as a reference system defined in the reciprocal space, and is selected as $\chi_0 = 0.07$~\cite{KozlovskiiDobush2020}.
+
+The coefficients $g_n$ are given by the formulas:
+\begin{align}
+	& g_0 = \ln T_0, \qquad g_1 = T_1/T_0, \qquad g_2 = T_2/T_0 - g_1^2,  
+	\nonumber \\
+	& g_3 = T_3/T_0 - g_1^3 - 3g_1 g_2, 
+	\nonumber\\
+	& g_4 = T_4/T_0 - g_1^4 - 6 g_1^2 g_2 - 4 g_1 g_3 - 3 g_2^2, 
+	\nonumber\\
+	& a_4 = -g_4,
+\end{align}
+where $T_n(p,\alpha^*)$ are the following special functions
+\begin{equation}
+	T_n(p,\alpha^*) = \sum_{m=0}^{\infty} \frac{(\alpha^*)^m}{m!} m^n {\rm e}^{-pm^2}.
+\end{equation}
+Here $\alpha^*=v e^{\beta_c\mu_0}$, and the parameter $p$ has the form
+\begin{equation}
+	p = \frac{\beta_c}{2} \Phi^{(r)}(0) [\chi_0 + A_\gamma].
+\end{equation} 
+
+The quantity $\beta_c$ denotes the critical value of the inverse temperature. In~\cite{KozlovskiiDobush2020} it was found that
+\begin{equation*}
+	\varepsilon\beta_c = 0.200, \quad \frac{k_{\rm B} T_c}{\varepsilon} = 4.995.
+\end{equation*}
+We also use the reduced temperature defined as $T^* = k_{\rm B}T/\varepsilon$, and thus its critical value $T^*_c = 4.995.$
+
+Since $p$ is independent of temperature, the coefficients $g_n$ are also independent of temperature. The numerical values for other coefficients used in this paper are the same as those in~\cite[eqs.~(5), (23), and~(24)]{KozlovskiiDobush2020}:
+\begin{eqnarray}
+	\label{params}
+	\chi_0 = 0.07, & \quad \gamma = 1.65, \nonumber\\
+	n_0 = 1.521, & \quad R_0/\alpha = 2.9544, \nonumber\\
+	\alpha^* = 5.0 & \quad p = 1.0.
+\end{eqnarray}
+
+The quantity $d$ entering equations~\eqref{eq:eosMT} and~\eqref{chem_pot} is a function of temperature
+\begin{equation}
+	\label{def:D0}
+	d = g_2 - \frac{1}{2} \frac{g_3^2}{g_4} - \frac{1}{\beta W(0)}.
+\end{equation}
+The condition $d = 0$ defines the critical temperature~\cite{KozlovskiiDobush2020}
+\begin{equation}
+	k_{\rm B}T_c = \left(g_2 - \frac{1}{2} \frac{g_3^2}{g_4} \right) (B - 1 + \chi_0) \Phi^{(r)}(0).
+\end{equation}  
+
+The function $E_\mu(M, T)$ from the equation \eqref{eq:eosMT} is provided by
+\begin{eqnarray}\label{eq:E_mu}
+	E_\mu (M, T) & = & - \frac{\ln (2\pi \beta W(0))}{2 N_v}  
+	\nonumber\\
+	&& +  g_0 - \frac{\beta W(0)}{2} 
+	\left(\frac{\tilde\mu}{W(0)} \right)^{2} 
+	\nonumber\\
+	&& - \frac{g_3}{g_4} {M} \! - \frac{g_3^2}{2 g_4^2}  d - \frac{1}{24} \frac{g_3^4}{g_4^3}. 
+\end{eqnarray}
+Here the quantity $N_v$ defines the number of cubic cells in volume $V$ for the initial model.
+In the thermodynamic limit, $N_v \to \infty$, and thus, the first term can be neglected. The term $\tilde{\mu}/W(0)$ can be expressed in terms of $M$ using~\eqref{chem_pot}. The temperature and the inverse temperature can always be expressed in terms of the reduced temperature and a corresponding critical value:
+\begin{equation*}
+	T = T_c(1+\tau), \quad \beta = \beta_c (1 + \tau)^{-1}.
+\end{equation*} 
+
+The quantity $\bar{\rho}_0$ is a solution to the following cubic equation
+\begin{equation}\label{eq:ro_M}
+	M + d \bar\rho_0 - \frac{a_4}{6} \bar\rho_0^3 = 0.
+\end{equation}
+For any $\tau > 0$, the latter equation has one real root
+\begin{equation}\label{eq:ro_MT}
+	\bar \rho_0 = \left(- \frac{3 M}{g_4} + \sqrt{Q_t}\right)^{1/3} - \left(  \frac{3 M}{g_4} + \sqrt{Q_t} \right)^{1/3},
+\end{equation}
+where
+\begin{equation}
+	Q_t = \left(  \frac{2d}{g_4}\right)^3 + \left( -\frac{3 M}{g_4}\right)^2, \qquad g_4<0.
+\end{equation}
+Thus, $\bar{\rho}_0$ is a function of the temperature and the chemical potential.
+
+Let us introduce the reduced pressure
+\begin{equation}
+	\label{def:reduced_pres}
+	P^* \equiv \frac{P v}{\varepsilon}.
+\end{equation}
+Considering the equation of state~\eqref{eq:eosMT}, $P^*$ is explicitly written as
+\begin{eqnarray}
+	\label{eq:eosPTM_reduced}
+	P^* & = & (1 + \tau)T^*_c \bigg[ E_\mu(M, T) 
+	\nonumber\\
+	&& + M \bar \rho_0 + \frac{1}{2} d \bar \rho_0^2 - \frac{a_4}{24} \bar \rho_0^4
+	\bigg].
+\end{eqnarray}
+
+*****************************************************************************************
+
+End of literal copy
+
+*****************************************************************************************
+
+\begin{figure}[t!]
+	\centering
+	\includegraphics[width=0.45\textwidth]{f1.pdf} 
+	\vskip-3mm\caption{Isotherms of the reduced pressure $P^*$ as a function of the effective chemical potential $M$ at $T \geq T_c$ represented by black lines. Grey lines correspond to isotherms of pressure at $T < T_c$ based on the results for the same model taken from~\cite{KozlovskiiDobush2020}. 
+	}\label{fig1}
+\end{figure}
+Figure~\ref{fig1} illustrates the relationship between the reduced pressure $P^*$ and the effective chemical potential $M$ for various relative temperature values $\tau$. Below the critical temperature ($\tau < 0$), іsotherms are curves consisting of two segments connected by a vertex (grey lines in Figure~\ref{fig1}). This form indicates a first-order phase transition occurs in the system. Within our approach~\cite{KozlovskiiDobush2020} at $T<T_c$, negative values of the effective chemical potential mean the system is in a gaseous state. The vertex $M=0$ is a point of phase coexistence. Positive values of the effective chemical potential correspond to the liquid state. In both cases, the pressure tends to increase with $M$, but the slope of the liquid isotherm is much sharper. At the critical temperature pressure is a smooth plane curve (black dotted line in Figure~\ref{fig1}) with an inflection point at $M=0$. Thus, at the critical point $M=0, \tau=0$, $P^*_c = 1.606$. Beyond the critical temperature, the pressure behaves as a monotonically increasing function, and no phase transitions are observed. Summing up, since below the critical temperature, $M=0$ stands for phase coexistence, we obtain a phase diagram in pressure-temperature terms (see Figure~\ref{fig2}) by simply using this condition in the equation of state \eqref{eq:eosPTM_reduced}. 
+\begin{figure}[t!]
+	\centering
+	\includegraphics[width=0.45\textwidth]{f2.pdf} 
+	\vskip-3mm\caption{Phase diagram of the cell fluid model with the interaction potential \eqref{def:mod_morse} based on the equation of state~\eqref{eq:eosPTM_reduced}. 
+	}\label{fig2}
+\end{figure}
+
+
+
+
+
+
+%\section{Ентропія}
+
+
+
+
+
+\section{\label{sec:widom}Crossover line between gas-like and liquid-like structures of the supercritical fluid. The Widom line}
+
+ In the supercritical region, the substance no longer behaves distinctly as either a liquid or a gas. Instead, it exists as a single, continuous phase with no sharp liquid-gas boundary. Nevertheless, fluids exhibit distinct liquid-like and gas-like structures beyond the critical temperature. A way to represent a conditional boundary between liquid-like and gas-like regions in the supercritical fluid is the Widom line \--- a continuation of the coexistence line based on the maxima locus of some thermodynamic response functions~\cite{XuEtAl2005,McMillanStanley2010,SimeoniEtAl2010}. This happens because near the critical point, the system experiences very large fluctuations in density, and these fluctuations occur over increasingly large distances. Although, the equation of state is derived in the mean-field-like approximation,   in~\cite{DobushEtAl2024} we established that the isothermal compressibility of our cell fluid model diverge in the critical point, and consequently it display maxima in the supercritical region (see Figures~\ref{fig3}). It means the possibility to plot the Widom line, and to expand the phase diagram in Figure~\ref{fig2} beyond the critical point.
+ In what follows we consider this in more detail. 
+ 
+The isothermal compressibility $\kappa_T$ is defined by
+\begin{equation}
+	\label{def:isotherm_compres}
+	\kappa_T = -\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_{T, N}.
+\end{equation}
+In \cite{DobushEtAl2024} we derived expression for the reduced isothermal compressibility $\kappa^*_T \equiv \dfrac{\varepsilon \kappa_T}{v}$  in terms of thermodynamic derivatives suitable for the reduced form of equation of state in pressure-temperture-chemical potential terms \eqref{eq:eosPTM_reduced} 
+It is expressed in terms of the reduced pressure $P^*$ and the reduced particle number density $\rho^*$ as follows
+\begin{eqnarray}
+	\label{eq:kappa_star_m1}
+	\kappa^*_T & = & \frac{\varepsilon}{{\rho^*}^2} \left(\frac{\partial \rho^*}{\partial \mu}\right)_T
+	\\
+	\label{eq:kappa_star_m}
+	& = & \frac{\varepsilon^2}{{\rho^*}^2} \left(\frac{\partial^2 P^*}{\partial \mu^2}\right)_T.
+\end{eqnarray}
+The reduced particle number density $\rho^*$ is found by 
+\begin{equation}
+	\rho^* \equiv \frac{\langle N \rangle}{V} v = \left(\frac{\partial (Pv\beta)}{\partial (\beta \mu)}\right)_{T,V}.
+\end{equation}
+Taking explicit derivatives, we arrive at
+\begin{equation}\label{eq:density}
+	\rho^* = \rho^*_c - M + \frac{ \bar \rho_0}{\beta W(0)}.
+\end{equation}
+The quantity $\rho^*_c$ in the equation \eqref{eq:density} is the critical density~\cite{KozlovskiiDobush2020,DobushEtAl2024}
+\begin{eqnarray}\label{eq:crit_dens}
+	\rho^*_c & = &  g_1 - \frac{g_2 g_3}{g_4} + \frac{g_3^3}{3g_4^2}.
+\end{eqnarray}
+Its numerical value for parameters~\eqref{params} is $\rho^*_c = 0.978$.
+Finally, derive the isothermal compressibility in explicit form  
+\begin{eqnarray}
+	\kappa_T^* & = & \frac{\epsilon}{\rho^{*2} W(0)} \left\{   \frac{Q_t^{-1/2}}{\beta W(0) g_4} \left[ \bar \rho_0 - 2 \left( - \frac{3M}{g_4} + \sqrt{Q_t} \right)^{\frac{1}{3}} \right] -1 \right\}.
+\end{eqnarray}
+
+**************************************************************************
+
+[Figures only. Spots of text in progress.] 
+
+
+\begin{figure}[h!] 
+	\includegraphics[width=0.45\textwidth]{f3aa.pdf}
+	\includegraphics[width=0.46\textwidth]{f3bb.pdf}
+	%\includegraphics[width=\column]{f2b.pdf}
+	%\includegraphics[width=\column]{f2c.pdf}
+	\vskip-3mm
+	\caption{The reduced isothermal compressibility $\kappa^*_T$ as a function of the effective chemical potential $M$ for different temperatures $\tau = (T - T_c)/T_c$ at $T > T_c$. The two figures differ in the scale of $M$. Part~(a) covers a wider range of $M$. Part~(b) focuses on a range of $M$ around its critical value $0$, thin dashed black line displays maxima locus of $\kappa^*_T$.
+	}
+	\label{fig3}
+\end{figure}
+
+
+
+\begin{figure}[h!]
+	\centering \includegraphics[width=0.5\textwidth]{f4.pdf}
+	\vskip-3mm\caption{Complete phase diagram of the cell fluid model with the interaction potential \eqref{def:mod_morse}. Comparison of the Widom line (maxima locus of isothermal compressibility) and the crossover line between gas-like and liquid-like structures of the supercritical cell fluid based on the equation of state~\eqref{eq:eosPTM_reduced}. An inset in the right bottom corner focuses on a range of $\tau$ around its critical value $-0.01 < \tau < 0.05$.	}\label{fig4}
+\end{figure}
+
+
+
+
+%\subsubsection{Лінія Відома (лінія максимумів стисливості)}
+
+%\begin{figure}[h!]
+%	\centering \includegraphics[width=0.5\textwidth]{f5.pdf}
+%	\vskip-3mm\caption{Plot of the isothermal compressibility maxima line (the Widom line).	}\label{fig5}
+%\end{figure}
+
+%\subsubsection{Лінія розмежування газоподібної і рідиноподібної структур надкритичного плину, виходячи з рівняння стану при $M=0$}
+%\begin{figure}[h!]
+%	\centering \includegraphics[width=0.5\textwidth]{f6.pdf}
+%	\vskip-3mm\caption{Plot of the crossover line between gas-like and liquid-like structures of the supercritical cell fluid based on the equation of state.	}\label{fig6}
+%\end{figure}
+%\subsubsection{Порівняння обох ліній}
+
+
+
+\section{Conclusions}
+
+[Spots of text in progress.] 
+
+
+\vskip3mm \textit{This work was supported by the National Research Foundation of Ukraine under the project No.~2023.03/0201.}
+
+\begin{thebibliography}{99}
+	
+	%@incollection{KKD2018,
+		%  title={Phase Transitions in a Continuum {C}urie-{W}eiss System: A Quantitative Analysis},
+		%  author={Kozitsky, Yu. and Kozlovskii, M. and Dobush, O.},
+		%  booktitle={Modern Problems of Molecular Physics},
+		%  editor={Bulavin, L. A. Chalyi, A. V.},
+		%  pages={229--251},
+		%  year={2018},
+		%  publisher={Springer},
+		%  address={Cham, Switzerland}
+		
+		\bibitem{KnezEtAl2014} {\v{Z}}. Knez, E. Marko{\v{c}}i{\v{c}}, M. Leitgeb, M. Primo{\v{z}}i{\v{c}}, M. Knez Hrn{\v{c}}i{\v{c}}, M. {\v{S}}kerget, Industrial applications of supercritical fluids: A review, Energy, 77 (2014) 235-243. % https://doi.org/10.1016/j.energy.2014.07.044
+		\bibitem{BrykEtAl2017} T. Bryk, F. A. Gorelli, I. Mryglod, G. Ruocco, M. Santoro, T. Scopigno. Behavior of Supercritical Fluids across the “Frenkel Line”. The Journal of Physical Chemistry Letters 2017 8 (20), 4995-5001 %	DOI: 10.1021/acs.jpclett.7b02176
+		\bibitem{CampiEtAl2001} Campi, X., Krivine, H., Sator, N. Percolation line of self-bound clusters in supercritical fluids. Physica A: Statistical Mechanics and its Applications, 296(1-2), 24-30 (2001). %https://doi.org/10.1016/S0378-4371(01)00158-3
+		\bibitem{XuEtAl2005}Xu, L., Kumar, P., Buldyrev, S. V., Chen, S.-H., Poole, P. H., Sciortino, F., Stanley, H. E. Relation between the Widom line and the dynamic crossover in systems with a liquid-liquid phase transition. Proceedings of the National Academy of Sciences, 102(46), 16558–16562  (2005). doi:10.1073/pnas.0507870102 
+		\bibitem{McMillanStanley2010} McMillan, P., Stanley, H. Going supercritical. Nature Phys 6, 479–480 (2010). %https://doi.org/10.1038/nphys1711
+		\bibitem{SimeoniEtAl2010} Simeoni, G., Bryk, T., Gorelli, F. et al. The Widom line as the crossover between liquid-like and gas-like behaviour in supercritical fluids. Nature Phys 6, 503–507 (2010). %https://doi.org/10.1038/nphys1683
+		\bibitem{ArtemenkoEtAl2017} Artemenko, S., Krijgsman, P., Mazur, V. The Widom line for supercritical fluids. Journal of Molecular Liquids, 238, 122-128 (2017). %http://dx.doi.org/10.1016/j.molliq.2017.03.107
+		\bibitem{Proctor2020Book} J.~E. Proctor, The liquid and supercritical fluid states of matter. CRC Press (2020). %[ISBN 9780429491443]
+		
+		\bibitem{KozlovskiiDobush2020}  M.P. Kozlovskii and O.A. Dobush,  Ukr. J. Phys. {\bf 65} 428 (2020).
+		\bibitem{DobushEtAl2024} O.A. Dobush, M.P. Kozlovskii, R.V. Romanik, I.V. Pylyuk, arXiv preprint 2409.09786 (2024)
+		\bibitem{KozlovskiiDobush2016}  M. Kozlovskii and O. Dobush, J. Mol. Liq., {\bf 215}, 58, (2016).
+		
+		
+		
+		
+		
+%		\bibitem{refb}  I.V. Pylyuk and O.A. Dobush,  Ukr. J. Phys. {\bf 65} 1080 (2020).
+%		\bibitem{refc0} I.V. Pylyuk and M.P. Kozlovskii, O.A. Dobush, M.V. Dufanets, J. Mol. Liq., {\bf 355}, 122322, (2023).
+%		\bibitem{refc1} I.V. Pylyuk and M.P. Kozlovskii, O.A. Dobush, Ukr. J. Phys., {\bf 68}, 601, (2023).
+%		\bibitem{refc}  M.P. Kozlovskii and O.A. Dobush, Condens. Matter Phys., {\bf 20}, 23501,(2017).
+%		\bibitem{refd}  M.P. Kozlovskii and I.V. Pylyuk, O.A. Dobush, Condens. Matter Phys., {\bf 21}, 43502, (2018).
+%		\bibitem{ref8}  R.C. Lincoln and K.M. Koliwad, Phys. Rev., {\bf 157}, 463, (1967).
+%		\bibitem{ref9}  J.K. Singh, J. Adhikari, and S.K. Kwak, Fluid Phase Equilibria, {\bf 248}, 1, (2006).
+		
+		
+%		\bibitem{ref16} M.V.~Fedoryuk, \textit{Asymptotic methods in analysis} in {\it Analysis I: Integral Representations and Asymptotic Methods}, eds. M.A. Evgrafov and R.V. Gamkrelidze  (Encyclopaedia of Mathematical Sciences 13, Springer-Verlag Berlin Heidelberg, 1989) pp.~83--191.
+		
+%		\bibitem{ref11} A. J. Schultz and D. A. Kofke, Fluid Phase Equilibria, {\bf 409}, 12, (2016).
+%		\bibitem{ref12} A. J. Masters, J. Phys.: Condens. Matter, {\bf 20}, 283102, (2008).
+%		\bibitem{ref13} M. V. Ushcats, J. Chem. Phys., {\bf 140}, 234309, (2014).
+%		\bibitem{ref14} D. Pini and G. Stell, N. B. Wilding, Mol. Phys., {\bf95}, 483, (1998).
+%		\bibitem{ref15} C.-L. Lee and G. Stell, J. Hoye, J. Mol. Liq., {\bf 112}, 13, (2004).
+%		\bibitem{ref1}  Y. Kozitsky and M. Kozlovskii, O. Dobush, In \emph{Modern Problems of Molecular Physics}, Springer, 229--251 (2018).
+%		\bibitem{ref3}  M.P. Kozlovskii and O.A. Dobush, I.V. Pylyuk, Ukr. J. Phys. {\bf 62} 865 (2017).
+%		\bibitem{ref4}  I. Yukhnovskii and V. Kolomiets, I. Idzyk, Condens. Matter Phys., {\bf 16}, 23604, (2013).
+%		\bibitem{ref5}  I.R. Yukhnovskii, Condens. Matter Phys., {\bf 17}, 43001, (2014).
+		
+%		\bibitem{ref10} I.R. Yukhnovskii and M.P. Kozlovskii, I.V. Pylyuk, Phys. Rev. B, {\bf 66}, 134410, (2002).
+%		\bibitem{ref17} D. Pini and G. Stell, N. B. Wilding, Mol. Phys., \textbf{95}, 483, (1998).
+%		\bibitem{ref18} J.-M. Caillol, Mol. Phys., {\bf 104}, 1931, (2006).
+%		\bibitem{ref19} I.R Yukhnovskii., Theoret. and Math. Phys., \textbf{194}, 224, (2018).
+%		\bibitem{ref20} A. Oleinikova and L. Bulavin, V. Pipich, Chem. Phys. Let., {\bf 278}, 121, (1997).
+%		\bibitem{ref21} G. Brunner, J. Supercrit. Fluids, {\bf 47}, 373, (2009).
+%		\bibitem{ref22} G. Brunner, J. Supercrit. Fluids, {\bf 47}, 382, (2009).
+
+	
+	
+%	\bibitem{ref1} 
+%	\bibitem{ref2}
+%	\bibitem{ref3}
+%	\bibitem{ref4} 
+%	\bibitem{ref5}
+%	\bibitem{ref6}
+%	\bibitem{ref7}
+%	\bibitem{ref8}
+%	\bibitem{ref9}
+%	\bibitem{ref10}
+%	\bibitem{ref11}
+%	\bibitem{ref12}
+%	\bibitem{ref13}
+%	\bibitem{ref14}
+%	\bibitem{ref15}
+%	\bibitem{ref16}
+%	\bibitem{ref17}
+	
+	
+	
+\end{thebibliography}
+
+
+\end{document} 
+
+	The latter expression links the pressure $P$, the temperature $T$ ($\beta = 1/T$ is the inverse temperature), the cell's volume $v$ and the effective chemical potential $M$. In general $M$ is a function of the real chemical potential $\mu$:
+\begin{align}
+	&	M = \frac{\tilde\mu}{W(0)} + g_1 + n_c \tilde D(0) - \frac{1}{6} \frac{g_3^3}{g_4^2}, \\
+	&	\tilde\mu=\mu-\mu^*(1+\tau),
+\end{align}
+here $\mu^*$ is some positive constant, and $\tau$ is the relative temperature $\tau = (T - T_c) / T_c$,
+$T_c$ is the critical temperature. $W(0)$ is what we call an effective interaction potential\footnote{\textbf{explain} what is the effective interaction potential in a few words} at ${\bf k} = 0$:
+\begin{equation}
+	W(0) = \Phi^{(r)}(0) \left[ B - 1 + \chi_0 + \tau (\chi_0 + A_\gamma) \right].
+\end{equation}
+Here $\chi_0$ is a constant parameter, the quantities $B$ and $A_\gamma$ reads
+\begin{align} 
+	& B = 2 \gamma^3 e^{(1-\gamma)/\alpha},\nonumber \\
+	& A_\gamma = A e^{(n_0-\gamma)/\alpha} \left( \gamma / n_0\right)^3.
+\end{align}
+The coefficients $g_n$ are given by the formulas:
+\begin{align}
+	& g_0 = \ln T_0, \qquad g_1 = T_1/T_0, \qquad g_2 = T_2/T_0 - g_1^2,  \nonumber \\
+	& g_3 = T_3/T_0 - g_1^3 - 3g_1 g_2, \quad \qquad  g_4 = T_4/T_0 - g_1^4 - 6 g_1^2 g_2 - 4 g_1 g_3 - 3 g_2^2,
+\end{align}
+where $T_n(p,\alpha^*)$ are the following special functions
+\begin{equation}
+	T_n(p,\alpha^*) = \sum_{m=0}^{\infty} \frac{(\alpha^*)^m}{m!} m^n e^{pm^2}.
+\end{equation}
+Here $\alpha^*=v e^{\beta_c\mu^*}$, and the parameter $p$ has the form
+\begin{equation}
+	p = \frac{\beta_c}{2} \Phi^{(r)}(0) [\chi_0 + A_\gamma].
+\end{equation} 
+Note that we denote $\beta_c$ as the inverse critical temperature. Since $p$ fails to be the function of temperature, the coefficients $g_n$ are also temperature-free. The quantity $\tilde D(0)$ which has already appeared in both equations \eqref{eq:eos} and \eqref{3d2} is a function of temperature
+\begin{equation}
+	\tilde D(0) = g_2 - \frac{1}{2} \frac{g_3^2}{g_4} - \frac{1}{\beta W(0)},
+\end{equation}
+which equals zero at $T=T_c$. This circumstance gives us an expression for determining the critical temperature 
+\begin{equation}
+	T_c = \left(g_2 - \frac{1}{2} \frac{g_3^2}{g_4} \right) (B - 1 + \chi_0) \Phi^{(r)}(0).
+\end{equation}    
+The function $E_\mu(M, T)$ from the equation \eqref{eq:eos} is provided by
+\begin{align}
+	& E_\mu (M, T) = - \frac{1}{2 N_v} \ln (2\pi \beta W(0)) +  g_0 - \frac{\beta W(0)}{2} \!\! \left( \! \frac{\tilde\mu}{W(0)} \! \right)^{\! 2} \!\!\! - \frac{g_3}{g_4} {M} \! - \frac{g_3^2}{2 g_4^2}  \tilde D(0) - \frac{1}{24} \frac{g_3^4}{g_4^3}. 
+\end{align}
+Note that for all $ \tau> 0 $ there are no restrictions on the value of $ \bar \rho_0 $, which is a function of the temperature and the chemical potential
+\begin{equation}\label{2d18}
+	\bar \rho_0 = \left(- \frac{3\bar{M}}{g_4} + \sqrt{Q_t}\right)^{1/3} - \left(  \frac{3\bar{M}}{g_4} + \sqrt{Q_t} \right)^{1/3} \!\!\!\! ,
+\end{equation}
+where
+\begin{equation}
+	Q_t = \left(  \frac{2\tilde D(0)}{g_4}\right)^3 + \left( -\frac{3\bar{M}}{g_4}\right)^2, \qquad g_4<0.
+\end{equation}  
+...
+\begin{equation}\label{3d3}
+	\bar n = n_g - \bar{M} + \tilde g_2 \gamma_\tau \bar \rho_0,
+\end{equation}
+where
+\begin{equation}\label{3d4}
+	n_g = g_1 + n_c \tilde g_2 - \frac{1}{6} g_3^3 / g_4^2.
+\end{equation}
+...
