@@ -257,7 +257,7 @@ Figure~\ref{fig1} illustrates the relationship between the reduced pressure $P^*
 
 \section{\label{sec:widom}Crossover line between gas-like and liquid-like structures of the supercritical fluid. The Widom line}
 
- In the supercritical region, the substance no longer behaves distinctly as either a liquid or a gas. Instead, it exists as a single, continuous phase with no sharp liquid-gas boundary. Nevertheless, fluids exhibit distinct liquid-like and gas-like structures beyond the critical temperature. A way to represent a conditional boundary between liquid-like and gas-like regions in the supercritical fluid is the Widom line \--- a continuation of the coexistence line based on the maxima locus of some thermodynamic response functions~\cite{XuEtAl2005,McMillanStanley2010,SimeoniEtAl2010}. This happens because near the critical point, the system experiences very large fluctuations in density, and these fluctuations occur over increasingly large distances. Although, the equation of state~\eqref{eq:eosPTM_reduced} is derived in the mean-field-like approximation,   in~\cite{DobushEtAl2024} we established that the isothermal compressibility of our cell fluid model diverge in the critical point, and consequently it display maxima in the supercritical region (see Figures~\ref{fig3}). It means the possibility to plot the Widom line, and to expand the phase diagram in Figure~\ref{fig2} beyond the critical point.
+ In the supercritical region, the substance no longer behaves distinctly as either a liquid or a gas. Instead, it exists as a single, continuous phase with no sharp liquid-gas boundary. Nevertheless, fluids exhibit distinct liquid-like and gas-like structures beyond the critical temperature. A way to represent a conditional boundary between liquid-like and gas-like regions in the supercritical fluid is the Widom line \--- a continuation of the coexistence line based on the maxima locus of some thermodynamic response functions~\cite{XuEtAl2005,McMillanStanley2010,SimeoniEtAl2010}. This happens because near the critical point, the system experiences very large fluctuations in density, and these fluctuations occur over increasingly large distances. Although, the equation of state~\eqref{eq:eosPTM_reduced} is derived in the mean-field-like approximation,  in~\cite{DobushEtAl2024} we established that the isothermal compressibility of our cell fluid model diverge in the critical point, and consequently it display maxima in the supercritical region (see Figures~\ref{fig3}). It means the possibility to plot the Widom line, and to expand the phase diagram in Figure~\ref{fig2} beyond the critical point.
  In what follows we consider this in more detail. 
  
 The isothermal compressibility $\kappa_T$ is defined by
@@ -302,16 +302,25 @@ Finally, derive the isothermal compressibility in explicit form
 	\label{fig3}
 \end{figure}
 Behavior of the reduced isothermal compressibility versus effective chemical potential at various fixed values of the reduced temperature is represented graphically in Figure~\ref{fig3}a (wide range of $M$), and Figure~\ref{fig3}b (narrow range around $M=0$). Right at the critical point the compressibility diverge. As a result, there is still a "memory" of the critical point, where $\kappa_T$ reach local maxima, but once the system moves further into the supercritical region, these maxima become less pronounced, and the compressibility decreases. 
-Below the critical temperature, negative values of $M$ correspond to gaseous densities, while positive values of $M$ represent liquid densities. Above the critical point, the fluid becomes continuous. However, Figure~\ref{fig2}a clearly shows significantly higher isothermal compressibility in the region where $M<0$, near the base of the maxima ridge, compared to the compressibility values in the $M>0$ region. In the first case ($M<0$), the supercritical fluid exhibits gas-like behavior. In the second case ($M>0$), it behaves like a liquid. Far beyond the critical point ($\tau > 0.5$), there is no noticeable difference in $\kappa_T$ values around the effective chemical potential $M=0$. At $\tau = 0.2$ the compressibility maxima become almost undistinguished (see Figure~\ref{fig2}b), they completely vanish at $\tau > 0.28$. 
+Below the critical temperature, negative values of $M$ correspond to gaseous densities, while positive values of $M$ represent liquid densities. Above the critical point, the fluid becomes continuous. However, Figure~\ref{fig3}a clearly shows significantly higher isothermal compressibility in the region where $M<0$, near the base of the maxima ridge, compared to the compressibility values in the $M>0$ region. In the first case ($M<0$), the supercritical fluid exhibits gas-like behavior. In the second case ($M>0$), it behaves like a liquid. Far beyond the critical point ($\tau > 0.5$), there is no noticeable difference in $\kappa_T$ values around the effective chemical potential $M=0$. At $\tau = 0.2$ the compressibility maxima become almost undistinguished (see Figure~\ref{fig3}b), they completely vanish at $\tau > 0.28$. 
 
 
-**************************************************************************
 
-[Figure only. Spots of text in progress.] 
+
+To identify the Widom line maximize the isothermal compressibility by solving the equation
+\begin{equation}\label{eq:maximize}
+	\frac{\partial \kappa_T^*}{\partial M} = 0.
+\end{equation}
+Applying the solution of \eqref{eq:maximize} in the equation of state \eqref{def:reduced_pres}, one locates the Widom line position in the pressure-temperature plane (see Figure~\ref{fig4}, dashed line), expanding the phase diagram displayed in Figure~\ref{fig2} beyond the critical point.
+
+*******************************************************************************
+
+[more text in progress] 
+
 
 \begin{figure}[h!]
 	\centering \includegraphics[width=0.5\textwidth]{f4.pdf}
-	\vskip-3mm\caption{Complete phase diagram of the cell fluid model with the interaction potential \eqref{def:mod_morse}. Comparison of the Widom line (maxima locus of isothermal compressibility) and the crossover line between gas-like and liquid-like structures of the supercritical cell fluid based on the equation of state~\eqref{eq:eosPTM_reduced}. An inset in the right bottom corner focuses on a range of $\tau$ around its critical value $-0.01 < \tau < 0.05$.	}\label{fig4}
+	\vskip-3mm\caption{Complete pressure-temperature phase diagram of the cell fluid model with the interaction potential \eqref{def:mod_morse}. Comparison of the Widom line (maxima locus of isothermal compressibility) and the crossover between gas-like and liquid-like structures of the supercritical cell fluid based on combination of the equation of state~\eqref{eq:eosPTM_reduced} and the condition $M = 0$. An inset in the right bottom corner focuses on a range of $\tau$ around its critical value $-0.01 < \tau < 0.05$.	}\label{fig4}
 \end{figure}
 
 
