@@ -61,7 +61,7 @@
 \end{center}
 
 \subsection*{Abstract}
-A cell fluid model with a modified Morse potential is studied. The supercritical states are considered with respect to a possibility to build a separation boundary between liquid-like and gas-like bahaviors. Two different lines are calculated that can be used for this purpose: the locus of the isothermal compressibility maxima and the line where the effective chemical potential is zero, $M=0$. The line corresponding to the condition $M=0$ is analoguous to the Ising model in zero external field.
+A cell fluid model with a modified Morse potential is studied. The supercritical states are considered with respect to a possibility to build a separation boundary between liquid-like and gas-like bahaviors. Three different lines are calculated that can be used for this purpose: the locus of the isothermal compressibility maxima, the locus of the thermal expansion coefficient maxima, and the line where the effective chemical potential is zero, $M=0$. By the symmetry of the functionals for the partition functions, the condition $M=0$ in fluids is analogous to the absence of an external field in the Ising model.
 
 \section{Introduction}
 A supercritical fluid is a state of matter that occurs when a substance is subjected to temperatures and pressures above its critical point (CP). Below CP the substance exhibits a liquid-gas coexistence. At CP, the distinction between the liquid and gas phases of a substance disappears, and beyond this point, the substance exists in a single continuous supercritical state. Despite the absence of first-order phase transitions above the critical point, fluids exhibit distinct liquid-like and gas-like behavior under supercritical conditions, and display a unique mix of properties. With densities comparable to liquids they possess low viscosity and high diffusivity like gases resulting in high solvent power. Moreover, the supercritical properties are instantly tunable by changing pressure and temperature. This is the reason why supercritical fluids have diverse applications across various industries \cite{KMLetal14}.
@@ -80,12 +80,6 @@ In Section~\ref{sec:eos}, we recall the form of the modified Morse potential, pr
 In the present work, we utilize the results obtained in~\cite{KD20,DKRP24arxiv,DKRP24}. In~\cite{KD20}, the phase space of collective variables was used to calculate the grand partition function of a cell fluid model in the zero-mode approximation, leading to explicit forms of the equation of state (EoS) in both pressure-temperature-chemical potential and pressure-temperature-density terms.
 These EoSs are applicable across a wide range of temperatures below and above the CP. Furthermore, in~\cite{DKRP24arxiv,DKRP24}, we have used these equations as the basis for calculating and graphically representing the thermodynamic response functions \--- specifically, the isothermal compressibility, thermal pressure coefficient, and thermal expansion \--- of the cell fluid model with the modified Morse potential in the supercritical region.
 
-**************************************************************
-
-[The following is the literal copy (compilation) from our recent preprint on response functions. Perhaps we should rephrase it, or change it somehow. Please help.]
-
-**************************************************************
-
 The modified Morse potential used to describe the interaction between particles is given by 
 \begin{eqnarray}
 	\label{def:mod_morse}
@@ -99,14 +93,17 @@ where $R_0$ is the coordinate of the potential minimum, $\alpha$ is an effective
 \end{equation}
 where $\varepsilon$ is the depth of the potential well at $r=R_0$. Applying $\gamma=2$ reduces $U(r)$ to the ordinary Morse potential~\cite{Morse29}. For a more detailed discussion of such modified Morse potential, see Sections~1 and~2 in~\cite{KD20}, and Section~2 in~\cite{DKRP24arxiv}.
 
-%The explicit form of the equation of state in terms of chemical potential-temperature in the case of $T\geq T_c$ is as follows: 
+We use $\varepsilon$ and $v$ as natural units for energy and volume. Therefore, the following reduced quantities are defined: the reduced density $\rho^*=\rho v$, where $\rho = \langle N \rangle /V$; reduced temperature $T^* = k_{\rm B}T/\varepsilon$; reduced pressure $P^* = Pv/\varepsilon$; reduced isothermal compressibility $\kappa^*_{T} = \varepsilon \kappa_T/v$; and the reduced thermal expansion coefficient $\alpha^*_{P} = \varepsilon \alpha_{P} / k_{\rm B}$. In above expressions $V$ stands for volume, $T$ the temperature, $k_{\rm B}$ the Boltzmann constant, $P$ the pressure, $\kappa_T$ the isothermal compressibility, $\alpha_{P}$ the thermal expansion coefficient, $\langle N \rangle$ is the average number of particles, with averaging over the grand canonical distribution.
 
-The equation of state obtained in~\cite{KD20} reads
-\begin{equation}
-	\label{eq:eosMT}
-	Pv\beta = E_\mu(M, T) + M \bar \rho_0 + \frac{1}{2} d \bar \rho_0^2 - \frac{a_4}{24} \bar \rho_0^4.
-\end{equation}
-The quantities in the left-hand side of the equation are $P$, the pressure; $\beta = (k_{\rm B} T)^{-1}$, the inverse temperature; $k_{\rm B}$, the Boltzmann constant; $T$, the temperature; $v$, cell volume. The quantities in the right-hand side are, in general, functions of the temperature $T$ and the chemical potential $\mu$. Let us present their expressions explicitly.
+The equation of state obtained in~\cite{KD20} and rewritten in reduced quantities in~\cite{DKRP24,DKRP24arxiv} reads
+\begin{eqnarray}\label{eq:eosMT}
+	%\label{eq:eosPTM_reduced}
+	P^* & = & (1 + \tau)T^*_c \bigg[ E_\mu(M, T) 
+	\nonumber\\
+	&& + M \bar \rho_0 + \frac{1}{2} d \bar \rho_0^2 - \frac{a_4}{24} \bar \rho_0^4
+	\bigg].
+\end{eqnarray}
+Let us explicitly present the expressions entering the right-hand side of this equation.
 
 First, the quantity $M$ depends linearly on the chemical potential
 \begin{align}\label{chem_pot}
@@ -139,23 +136,16 @@ The coefficients $g_n$ are given by the formulas:
 	& g_3 = T_3/T_0 - g_1^3 - 3g_1 g_2, 
 	\nonumber\\
 	& g_4 = T_4/T_0 - g_1^4 - 6 g_1^2 g_2 - 4 g_1 g_3 - 3 g_2^2, 
-	\nonumber\\
-	& a_4 = -g_4,
 \end{align}
 where $T_n(p,\alpha^*)$ are the following special functions
 \begin{equation}
 	T_n(p,\alpha^*) = \sum_{m=0}^{\infty} \frac{(\alpha^*)^m}{m!} m^n {\rm e}^{-pm^2}.
 \end{equation}
-Here $\alpha^*=v e^{\beta_c\mu_0}$, and the parameter $p$ has the form
+Here $\alpha^*=v e^{\beta_c\mu_0}$, where $\beta_c$ is the critical value of the inverse temperature $\beta = (k_{\rm B}T)^{-1}$, and the parameter $p$ has the form
 \begin{equation}
-	p = \frac{\beta_c}{2} \Phi^{(r)}(0) [\chi_0 + A_\gamma].
+	p = \frac{1}{2T^*_c} \frac{\Phi^{(r)}(0)}{\varepsilon} [\chi_0 + A_\gamma].
 \end{equation} 
-
-The quantity $\beta_c$ denotes the critical value of the inverse temperature. In~\cite{KD20} it was found that
-\begin{equation*}
-	\varepsilon\beta_c = 0.200, \quad \frac{k_{\rm B} T_c}{\varepsilon} = 4.995.
-\end{equation*}
-We also use the reduced temperature defined as $T^* = k_{\rm B}T/\varepsilon$, and thus its critical value $T^*_c = 4.995.$
+The critical temperature found in~\cite{KD20} is $T_c^* = 4.995.$
 
 Since $p$ is independent of temperature, the coefficients $g_n$ are also independent of temperature. The numerical values for other coefficients used in this paper are the same as those in~\cite[eqs.~(5), (23), and~(24)]{KD20}:
 \begin{eqnarray}
@@ -172,9 +162,9 @@ The quantity $d$ entering equations~\eqref{eq:eosMT} and~\eqref{chem_pot} is a f
 \end{equation}
 The condition $d = 0$ defines the critical temperature~\cite{KD20}
 \begin{equation}
-	k_{\rm B}T_c = \left(g_2 - \frac{1}{2} \frac{g_3^2}{g_4} \right) (B - 1 + \chi_0) \Phi^{(r)}(0).
+	T^*_c = \left(g_2 - \frac{1}{2} \frac{g_3^2}{g_4} \right) (B - 1 + \chi_0) \frac{\Phi^{(r)}(0)}{\varepsilon}.
 \end{equation}  
-The function $E_\mu(M, T)$ from the equation \eqref{eq:eosMT} is provided by
+The function $E_\mu(M, T)$ from the equation \eqref{eq:eosMT} is given by
 \begin{eqnarray}\label{eq:E_mu}
 	E_\mu (M, T) & = & - \frac{\ln (2\pi \beta W(0))}{2 N_v}  
 	\nonumber\\
@@ -191,7 +181,7 @@ In the thermodynamic limit, $N_v \to \infty$, and thus, the first term can be ne
 
 The quantity $\bar{\rho}_0$ is a solution to the following cubic equation
 \begin{equation}\label{eq:ro_M}
-	M + d \bar\rho_0 - \frac{a_4}{6} \bar\rho_0^3 = 0.
+	M + d \bar\rho_0 + \frac{g_4}{6} \bar\rho_0^3 = 0.
 \end{equation}
 For any $\tau > 0$, the latter equation has one real root
 \begin{equation}\label{eq:ro_MT}
@@ -203,37 +193,17 @@ where
 \end{equation}
 Thus, $\bar{\rho}_0$ is a function of the temperature and the chemical potential.
 
-Let us introduce the reduced pressure
-\begin{equation}
-	\label{def:reduced_pres}
-	P^* \equiv \frac{P v}{\varepsilon}.
-\end{equation}
-Considering the equation of state~\eqref{eq:eosMT}, $P^*$ is explicitly written as
-\begin{eqnarray}
-	\label{eq:eosPTM_reduced}
-	P^* & = & (1 + \tau)T^*_c \bigg[ E_\mu(M, T) 
-	\nonumber\\
-	&& + M \bar \rho_0 + \frac{1}{2} d \bar \rho_0^2 - \frac{a_4}{24} \bar \rho_0^4
-	\bigg].
-\end{eqnarray}
-
-*****************************************************************************************
-
-End of literal copy
-
-*****************************************************************************************
-
 \begin{figure}[t!]
 	\centering
 	\includegraphics[width=0.45\textwidth]{f1.pdf} 
 	\vskip-3mm\caption{Isotherms of the reduced pressure $P^*$ as a function of the effective chemical potential $M$. Black lines correspond to $T \geq T_c$. Grey lines correspond to $T < T_c$. 
 	}\label{fig1}
 \end{figure}
-Figure~\ref{fig1} illustrates the relationship between the reduced pressure $P^*$ and the effective chemical potential $M$ for various relative temperature values $\tau$. Below the critical temperature ($\tau < 0$), each ³sotherm contains a kink (three bottom lines in Figure~\ref{fig1}). This form indicates a first-order phase transition in the system. Within our approach~\cite{KD20} at $T<T_c$, negative values of the effective chemical potential $M$ imply the system is in a gaseous state. The condition $M=0$ is a point of phase coexistence. Positive values of the effective chemical potential correspond to the liquid state. In both cases, the pressure tends to increase with $M$, but the slope of the liquid isotherm is much steeper. At the critical temperature, the pressure is a smooth curve (black dotted line in Figure~\ref{fig1}) with an inflection point at $M=0$. Thus, at the critical point coordinates are defined by $M=0, \tau=0$, $P^*_c = 1.606$. Beyond the critical temperature, the pressure behaves as a monotonically increasing function, and no phase transitions are observed. Summing up, below the critical temperature, $M=0$ is the condition for phase coexistence. Substituring this condition into the EoS~\eqref{eq:eosPTM_reduced}, we obtain a phase diagram in pressure-temperature plane (see Figure~\ref{fig2}). We will use the same condition to obtain a continuation of the coexistence line into the supercritical region. 
+Figure~\ref{fig1} illustrates the relationship between the reduced pressure $P^*$ and the effective chemical potential $M$ for various relative temperature values $\tau$. Below the critical temperature ($\tau < 0$), each ³sotherm contains a kink (three bottom lines in Figure~\ref{fig1}). This form indicates a first-order phase transition in the system. Within our approach~\cite{KD20} at $T<T_c$, negative values of the effective chemical potential $M$ imply the system is in a gaseous state. The condition $M=0$ is a point of phase coexistence. Positive values of the effective chemical potential correspond to the liquid state. In both cases, the pressure tends to increase with $M$, but the slope of the liquid isotherm is much steeper. At the critical temperature, the pressure is a smooth curve (black dotted line in Figure~\ref{fig1}) with an inflection point at $M=0$. Thus, at the critical point coordinates are defined by $M=0, \tau=0$, $P^*_c = 1.606$. Beyond the critical temperature, the pressure behaves as a monotonically increasing function, and no phase transitions are observed. Summing up, below the critical temperature, $M=0$ is the condition for phase coexistence. Substituting this condition into the EoS~\eqref{eq:eosMT}, we obtain a phase diagram in pressure-temperature plane (see Figure~\ref{fig2}). We will use the same condition to obtain a continuation of the coexistence line into the supercritical region. 
 \begin{figure}[t!]
 	\centering
 	\includegraphics[width=0.45\textwidth]{f2.pdf} 
-	\vskip-3mm\caption{Phase diagram in the $P^*-\tau$ plane for the cell fluid model with the interaction potential \eqref{def:mod_morse}. The result is based on the equation of state~\eqref{eq:eosPTM_reduced}. 
+	\vskip-3mm\caption{Phase diagram in the $P^*-\tau$ plane for the cell fluid model with the interaction potential \eqref{def:mod_morse}. The result is based on the equation of state~\eqref{eq:eosMT}. 
 	}\label{fig2}
 \end{figure}
 
@@ -249,7 +219,7 @@ The isothermal compressibility $\kappa_T$ is defined by
 	\label{def:isotherm_compres}
 	\kappa_T = -\frac{1}{V}\left(\frac{\partial V}{\partial P}\right)_{T, N}.
 \end{equation}
-In \cite{DKRP24arxiv,DKRP24} we derived expression for the reduced isothermal compressibility $\kappa^*_T \equiv \dfrac{\varepsilon \kappa_T}{v}$  in terms of thermodynamic derivatives suitable for the reduced form of the equation of state in pressure-temperture-chemical potential terms \eqref{eq:eosPTM_reduced} 
+In \cite{DKRP24arxiv,DKRP24} we derived expression for the reduced isothermal compressibility $\kappa^*_T \equiv \dfrac{\varepsilon \kappa_T}{v}$  in terms of thermodynamic derivatives suitable for the reduced form of the equation of state in pressure-temperture-chemical potential terms \eqref{eq:eosMT} 
 It is expressed in terms of the reduced pressure $P^*$ and the reduced particle number density $\rho^*$ as follows
 \begin{eqnarray}
 	\label{eq:kappa_star_m1}
@@ -260,7 +230,7 @@ It is expressed in terms of the reduced pressure $P^*$ and the reduced particle 
 \end{eqnarray}
 The reduced particle number density $\rho^*$ is found by 
 \begin{equation}
-	\rho^* \equiv \frac{\langle N \rangle}{V} v = \left(\frac{\partial (Pv\beta)}{\partial (\beta \mu)}\right)_{T,V}.
+	\rho^* \equiv \frac{\langle N \rangle}{V} v = \varepsilon\left(\frac{\partial P^*}{\partial \mu}\right)_{T,V}.
 \end{equation}
 Taking explicit derivatives, we arrive at
 \begin{equation}\label{eq:density}
@@ -271,7 +241,7 @@ The quantity $\rho^*_c$ in the equation \eqref{eq:density} is the critical densi
 	\rho^*_c & = &  g_1 - \frac{g_2 g_3}{g_4} + \frac{g_3^3}{3g_4^2}.
 \end{eqnarray}
 Its numerical value for parameters~\eqref{params} is $\rho^*_c = 0.978$.
-Finally, derive the isothermal compressibility in explicit form  
+Finally, the isothermal compressibility takes on the explicit form  
 \begin{eqnarray}
 	\kappa_T^* & = & \frac{\epsilon}{\rho^{*2} W(0)} \left\{   \frac{Q_t^{-1/2}}{\beta W(0) g_4} \left[ \bar \rho_0 - 2 \left( - \frac{3M}{g_4} + \sqrt{Q_t} \right)^{\frac{1}{3}} \right] -1 \right\}.
 \end{eqnarray}
@@ -297,19 +267,43 @@ Below the critical temperature, negative values of $M$ correspond to gaseous den
 	}
 	\label{fig3b}
 \end{figure}
-To identify the Widom line, the locus of the isothermal compressibility maxima is found by solving the equation
+To identify the Widom line based on the locus of the isothermal compressibility maxima, we solve the equation
 \begin{equation}\label{eq:maximize}
 	\frac{\partial \kappa_T^*}{\partial M} = 0
 \end{equation}
-with respect to $M$. 
-Substituting the solution of \eqref{eq:maximize} into the equation of state \eqref{def:reduced_pres}, one locates the Widom line in the pressure-temperature plane (see Figure~\ref{fig4}, dashed line), expanding the phase diagram displayed in Figure~\ref{fig2} beyond the critical point.
+with respect to $M$.
+Substituting the solution of \eqref{eq:maximize} into the equation of state \eqref{eq:eosMT}, one locates the Widom line in the pressure-temperature plane (see Figure~\ref{fig4}, dashed line), expanding the phase diagram displayed in Figure~\ref{fig2} beyond the critical point.
 
-On the one hand, within the present approach, the condition $M=0$ holds along phase coexistence up to the critical point. Thus, the implementation of the condition  $M=0$ above CP seems to be a natural continuation of the coexistence line into the supercritical region. On the other hand, taking into account the functional form of the grand partition function~\cite{KD16,KR09}, the condition of $M=0$ is equivalent to the absence of an external field in the Ising model. This analogy is interesting from the perspective of mapping between the Ising model and fluids~\cite{Kulinskii10jcp,BK11}.
+Similarly to the isothermal compressibility, similar arguments apply to the thermal expansion coefficient defined as
+\begin{equation}
+	\alpha_{P} = \frac{1}{V} \left(\frac{\partial V}{\partial T}\right)_{P,N}.
+\end{equation}
+Its reduced counterpart is calculated based on EoS~\eqref{eq:eosMT} by formula
+\begin{eqnarray}
+	\alpha^*_P & = & \frac{1}{T^*_c \rho^*}
+	\left[ 
+	-\left(\frac{\partial \rho^*}{\partial \tau}\right)_{\mu}
+	\right. \nonumber\\
+	&& + \left.\left(\frac{\partial \rho^*}{\partial \mu}\right)_{T}
+	\left(\frac{\partial P^*}{\partial \tau}\right)_{\mu}
+	\left(\frac{\partial P^*}{\partial \mu}\right)^{-1}_{T} 
+	\right].
+\end{eqnarray}
+Figure~\ref{fig3b} illustrates the dependence of $\alpha^*_{P}$ on $M$ at some given values of $\tau$, at $T>T_c$. The thermal expansion coefficient also develops a ridge of maxima in the supercritical phase, that vanishes at $\tau > 0.35$.
+To identify the Widom line based on the locus of the thermal expansion coefficient maxima, we solve the equation
+\begin{equation}\label{eq:maximize_alpha}
+	\frac{\partial \alpha_P^*}{\partial M} = 0
+\end{equation}
+with respect to $M$.
+Substituting the solution of \eqref{eq:maximize_alpha} into the equation of state \eqref{eq:eosMT}, one locates another Widom line in the pressure-temperature plane (see Figure~\ref{fig4}, dash-dotted line). This is the second option for the separation line between liquid-like and gas-like fluid.
+
+
+The third choice for the boundary between liquid-like and gas-like regions beyond CP is based on the condition $M=0$. On the one hand, within the present approach, the condition $M=0$ holds along phase coexistence up to the critical point. Thus, the implementation of the condition  $M=0$ above CP seems to be a natural continuation of the coexistence line into the supercritical region. On the other hand, taking into account the functional form of the grand partition function~\cite{KD16,KR09}, the condition of $M=0$ is equivalent to the absence of an external field in the Ising model. This analogy is interesting from the perspective of direct mapping between the Ising model and fluids~\cite{Kulinskii10jcp,BK11}. In Fig.~\ref{fig4} the separation line based on this condition $M=0$ is given by the dotted curve.
 
 
 \begin{figure}[h!]
 	\centering \includegraphics[width=0.5\textwidth]{f4b.pdf}
-	\vskip-3mm\caption{Complete pressure-temperature phase diagram of the cell fluid model with the interaction potential \eqref{def:mod_morse}. Comparison of the Widom line (maxima locus of isothermal compressibility and thermal pressure) and the crossover between gas-like and liquid-like structures of the supercritical cell fluid based on combination of the equation of state~\eqref{eq:eosPTM_reduced} and the condition $M = 0$. An inset in the right bottom corner focuses on a range of $\tau$ around its critical value $-0.01 < \tau < 0.05$.	}\label{fig4}
+	\vskip-3mm\caption{Complete pressure-temperature phase diagram of the cell fluid model with the interaction potential \eqref{def:mod_morse}. Comparison of the Widom line (maxima locus of isothermal compressibility and thermal pressure) and the crossover between gas-like and liquid-like structures of the supercritical cell fluid based on combination of the equation of state~\eqref{eq:eosMT} and the condition $M = 0$. An inset in the right bottom corner focuses on a range of $\tau$ around its critical value $-0.01 < \tau < 0.05$.	}\label{fig4}
 \end{figure}
 
 
@@ -332,7 +326,8 @@ On the one hand, within the present approach, the condition $M=0$ holds along ph
 
 
 \section{Conclusions}
-The locus of the isothermal compressibility maxima is calculated for the cell fluid model with the modified Morse potential. This is considered as a good candidate for a separation line between gas-like and liquid-like regions in the supercritical phase. We also suggest another such line derived from the condition for the effective chemical potential $M=0$. This is a natural extension of the coexistence line below CP, since the same condition is used in both cases. A noticeable difference between the two separation lines is that the compressibility maxima end at some temperature (or pressure) value above CP, see Fig.~\ref{fig4}, while the second line extends infinitely far from CP. Investigation of how physical quantities change their behavior when crossing these lines will be the subject of next studies.
+The supercritical region of the phase diagram is studied for the cell fluid model with the modified Morse potential. Three lines are found that can be considered as good candidates for a separation boundary between gas-like and liquid-like regions in the supercritical phase. The first line is the locus of the isothermal compressibility maxima. The second line is the locus of the thermal expansion coefficient maxima. The third line is the location of states where the condition $M=0$ holds true. This third option seems to be a natural extension of the coexistence line beyond the critical point, since the same condition is used both below and above $T_c$. A noticeable difference between two loci of thermodynamic response functions maxima and the line obtained from $M=0$ is that the latter one is extended over the phase diagram without any limits, while the first two have their termination points. Investigation of how physical quantities change their behavior when crossing these lines will be the subject of our future studies.
+
 
 \vskip3mm \textit{This work was supported by the National Research Foundation of Ukraine under the project No.~2023.03/0201.}
 
