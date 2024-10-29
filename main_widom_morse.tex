@@ -61,6 +61,7 @@
 \end{center}
 
 \subsection*{Abstract}
+A cell fluid model with a modified Morse potential is studied. The supercritical states are considered with respect to a possibility to build a separation boundary between liquid-like and gas-like bahaviors. Two different lines are calculated that can be used for this purpose: the locus of the isothermal compressibility maxima and the line where the effective chemical potential is zero, $M=0$. The line corresponding to the condition $M=0$ is analoguous to the Ising model in zero external field.
 
 \section{Introduction}
 A supercritical fluid is a state of matter that occurs when a substance is subjected to temperatures and pressures above its critical point (CP). Below CP the substance exhibits a liquid-gas coexistence. At CP, the distinction between the liquid and gas phases of a substance disappears, and beyond this point, the substance exists in a single continuous supercritical state. Despite the absence of first-order phase transitions above the critical point, fluids exhibit distinct liquid-like and gas-like behavior under supercritical conditions, and display a unique mix of properties. With densities comparable to liquids they possess low viscosity and high diffusivity like gases resulting in high solvent power. Moreover, the supercritical properties are instantly tunable by changing pressure and temperature. This is the reason why supercritical fluids have diverse applications across various industries \cite{KMLetal14}.
@@ -76,8 +77,8 @@ In Section~\ref{sec:eos}, we recall the form of the modified Morse potential, pr
 
 \section{\label{sec:eos} The equation of state}
 
-In the present work we take advantage of the results obtained in \cite{KD20,DKRP24arxiv,DKRP24}. In \cite{KD20}, the phase space of collective variables
-is used for calculating the grand partition function of a cell fluid model in the zero-mode approximation and consequently deriving the explicit forms of the equation of state (EoS) both in pressure-temperature-chemical potential terms and pressure-temperature-density terms. The resulting EoSs are applicable in a wide range of temperatures below and above the critical point. In~\cite{DKRP24arxiv,DKRP24}, we used these equations as the basis for the calculation and graphical representation of the thermodynamic response functions (isothermal compressibility, thermal pressure coefficient, thermal expansion) of the cell fluid model with modified Morse potential in the supercritical region.
+In the present work, we utilize the results obtained in~\cite{KD20,DKRP24arxiv,DKRP24}. In~\cite{KD20}, the phase space of collective variables was used to calculate the grand partition function of a cell fluid model in the zero-mode approximation, leading to explicit forms of the equation of state (EoS) in both pressure-temperature-chemical potential and pressure-temperature-density terms.
+These EoSs are applicable across a wide range of temperatures below and above the CP. Furthermore, in~\cite{DKRP24arxiv,DKRP24}, we have used these equations as the basis for calculating and graphically representing the thermodynamic response functions \--- specifically, the isothermal compressibility, thermal pressure coefficient, and thermal expansion \--- of the cell fluid model with the modified Morse potential in the supercritical region.
 
 **************************************************************
 
@@ -85,7 +86,7 @@ is used for calculating the grand partition function of a cell fluid model in th
 
 **************************************************************
 
-The potential of interaction between particles is taken in a form of a modified Morse potential
+The modified Morse potential used to describe the interaction between particles is given by 
 \begin{eqnarray}
 	\label{def:mod_morse}
 	U(r) & = & \varepsilon C_{H} \left[A {\rm e}^{-n_0(r-R_0)/\alpha} \right.
@@ -96,9 +97,7 @@ where $R_0$ is the coordinate of the potential minimum, $\alpha$ is an effective
 \begin{equation}
 	C_{H} = \frac{n_0}{n_0 + \gamma - 2}, \quad A = \frac{2 - \gamma}{n_0},
 \end{equation}
-where $\varepsilon$ is the depth of the potential well at $r=R_0$. Applying $\gamma=2$ reduces $U(r)$ to the ordinary Morse potential~\cite{Morse29}. For a more detailed discussion of such modified Morse potential, see Sections~1 and~2 in~\cite{KD20}.
-
-Our modification contains an additional repulsive term, which enables us to single out a reference system (in the reciprocal space) and apply the method of collective variables to calculating the grand partition function~\cite{KD16}.
+where $\varepsilon$ is the depth of the potential well at $r=R_0$. Applying $\gamma=2$ reduces $U(r)$ to the ordinary Morse potential~\cite{Morse29}. For a more detailed discussion of such modified Morse potential, see Sections~1 and~2 in~\cite{KD20}, and Section~2 in~\cite{DKRP24arxiv}.
 
 %The explicit form of the equation of state in terms of chemical potential-temperature in the case of $T\geq T_c$ is as follows: 
 
@@ -175,7 +174,6 @@ The condition $d = 0$ defines the critical temperature~\cite{KD20}
 \begin{equation}
 	k_{\rm B}T_c = \left(g_2 - \frac{1}{2} \frac{g_3^2}{g_4} \right) (B - 1 + \chi_0) \Phi^{(r)}(0).
 \end{equation}  
-
 The function $E_\mu(M, T)$ from the equation \eqref{eq:eosMT} is provided by
 \begin{eqnarray}\label{eq:E_mu}
 	E_\mu (M, T) & = & - \frac{\ln (2\pi \beta W(0))}{2 N_v}  
@@ -231,7 +229,7 @@ End of literal copy
 	\vskip-3mm\caption{Isotherms of the reduced pressure $P^*$ as a function of the effective chemical potential $M$. Black lines correspond to $T \geq T_c$. Grey lines correspond to $T < T_c$. 
 	}\label{fig1}
 \end{figure}
-Figure~\ref{fig1} illustrates the relationship between the reduced pressure $P^*$ and the effective chemical potential $M$ for various relative temperature values $\tau$. Below the critical temperature ($\tau < 0$), each ³sotherm contains a kink (grey lines in Figure~\ref{fig1}). This form indicates a first-order phase transition in the system. Within our approach~\cite{KD20} at $T<T_c$, negative values of the effective chemical potential $M$ mean the system is in a gaseous state. The condition $M=0$ is a point of phase coexistence. Positive values of the effective chemical potential correspond to the liquid state. In both cases, the pressure tends to increase with $M$, but the slope of the liquid isotherm is much sharper. At the critical temperature, the pressure is a smooth curve (black dotted line in Figure~\ref{fig1}) with an inflection point at $M=0$. Thus, at the critical point $M=0, \tau=0$, $P^*_c = 1.606$. Beyond the critical temperature, the pressure behaves as a monotonically increasing function, and no phase transitions are observed. Summing up, since below the critical temperature, $M=0$ is the condition for phase coexistence, we obtain a phase diagram in pressure-temperature terms (see Figure~\ref{fig2}) by simply using this condition in the equation of state \eqref{eq:eosPTM_reduced}. 
+Figure~\ref{fig1} illustrates the relationship between the reduced pressure $P^*$ and the effective chemical potential $M$ for various relative temperature values $\tau$. Below the critical temperature ($\tau < 0$), each ³sotherm contains a kink (three bottom lines in Figure~\ref{fig1}). This form indicates a first-order phase transition in the system. Within our approach~\cite{KD20} at $T<T_c$, negative values of the effective chemical potential $M$ imply the system is in a gaseous state. The condition $M=0$ is a point of phase coexistence. Positive values of the effective chemical potential correspond to the liquid state. In both cases, the pressure tends to increase with $M$, but the slope of the liquid isotherm is much steeper. At the critical temperature, the pressure is a smooth curve (black dotted line in Figure~\ref{fig1}) with an inflection point at $M=0$. Thus, at the critical point coordinates are defined by $M=0, \tau=0$, $P^*_c = 1.606$. Beyond the critical temperature, the pressure behaves as a monotonically increasing function, and no phase transitions are observed. Summing up, below the critical temperature, $M=0$ is the condition for phase coexistence. Substituring this condition into the EoS~\eqref{eq:eosPTM_reduced}, we obtain a phase diagram in pressure-temperature plane (see Figure~\ref{fig2}). We will use the same condition to obtain a continuation of the coexistence line into the supercritical region. 
 \begin{figure}[t!]
 	\centering
 	\includegraphics[width=0.45\textwidth]{f2.pdf} 
@@ -241,19 +239,10 @@ Figure~\ref{fig1} illustrates the relationship between the reduced pressure $P^*
 
 
 
+\section{\label{sec:widom} Crossover lines between gas-like and liquid-like behavior of the supercritical fluid.}
 
-
-
-%\section{Åíòðîï³ÿ}
-
-
-
-
-
-\section{\label{sec:widom}Crossover lines between gas-like and liquid-like behavior of the supercritical fluid.}
-
- In the supercritical region, the substance no longer behaves distinctly as either a liquid or a gas. Instead, it exists as a single, continuous phase with no sharp liquid-gas boundary. Nevertheless, fluids exhibit distinct liquid-like and gas-like behavior beyond the critical temperature. A way to represent a conditional boundary between liquid-like and gas-like regions in the supercritical fluid is the Widom line \--- a continuation of the coexistence line based on the maxima locus of some thermodynamic response functions~\cite{XKBetal05,MS10,SBGetal10}. This happens because near the critical point, the system experiences very large fluctuations in density, and these fluctuations occur over increasingly large distances. Although, the equation of state~\eqref{eq:eosPTM_reduced} is derived in the mean-field-like approximation,  in~\cite{DKRP24arxiv,DKRP24} we established that the isothermal compressibility of the cell fluid model diverge in the critical point, and consequently it displays maxima in the supercritical region (see Figures~\ref{fig3}). It means the possibility to derive the Widom line, and to expand the phase diagram in Figure~\ref{fig2} beyond the critical point.
- In what follows we consider this in more detail. 
+ In the supercritical region, substances no longer behave distinctly as either liquids or gases but exist as a single, continuous phase without a sharp liquid-gas boundary. However, fluids can still exhibit liquid-like and gas-like behaviors beyond the critical temperature. A way to represent a conditional boundary between these regions in supercritical fluids is the Widom line \--- a continuation of the coexistence line based on the locus of maxima of certain thermodynamic response functions~\cite{XKBetal05,MS10,SBGetal10}. This occurs because near CP, the system experiences significant fluctuations in density over increasingly large spatial scales. Although, the equation of state~\eqref{eq:eosPTM_reduced} is derived in the mean-field-like approximation, we established in~\cite{DKRP24arxiv,DKRP24} that the isothermal compressibility of the cell fluid model diverges at CP and consequently displays maxima in the supercritical region (see Figures~\ref{fig3}). This suggests the possibility of deriving the Widom line and expanding the phase diagram in Figure~\ref{fig2} beyond CP.
+ In what follows we consider this in more detail.
  
 The isothermal compressibility $\kappa_T$ is defined by
 \begin{equation}
@@ -335,9 +324,7 @@ On the other hand, within the present approach, $M=0$ at the points of phase coe
 
 
 \section{Conclusions}
-
-[Spots of text in progress.] 
-
+The locus of the isothermal compressibility maxima is calculated for the cell fluid model with the modified Morse potential. This is considered as a good candidate for a separation line between gas-like and liquid-like regions in the supercritical phase. We also suggest another such line derived from the condition for the effective chemical potential $M=0$. This is a natural extension of the coexistence line below CP, since the same condition is used in both cases. A noticeable difference between the two separation lines is that the compressibility maxima end at some temperature (or pressure) value above CP, see Fig.~\ref{fig4}, while the second line extends infinitely far from CP. Investigation of how physical quantities change their behavior when crossing these lines will be the subject of next studies.
 
 \vskip3mm \textit{This work was supported by the National Research Foundation of Ukraine under the project No.~2023.03/0201.}
 
