@@ -1,0 +1,51 @@
+\documentclass[fleqn,twoside,twocolumn,nofootinbib,showkeys]{revtex4} % Specifies the document class %,unsortedaddress
+%\usepackage[sec]{ujp} % \usepackage[cyr]{ujp} for cyrillic
+\usepackage[sec,doi]{ujp_UTF8} % \usepackage[cyr]{ujp_UTF8} for cyrillic
+
+\usepackage{orcidlink} % to insert a hyperlinked ORCiD logo
+\usepackage{amssymb}
+\usepackage{physics}
+%\usepackage{cite} % may be useful for different formats of numerical citation
+\usepackage{hyperref} % for hyperlinks in references
+\usepackage[nameinlink]{cleveref}
+%\usepackage{caption} % for \caption*
+\usepackage{amsmath}    % for "\eqref" macro
+\usepackage{graphicx}
+
+\begin{document}
+	\title[Supercritical crossover lines in a cell fluid model]%колонтитул
+	{Supercritical crossover lines in a cell fluid model}%
+	\author{O.A.~Dobush}
+	\author{M.P.~Kozlovskii}%1
+	\author{R.V.~Romanik}
+
+	\affiliation{Institute for Condensed Matter Physics,\\ Nat. Acad. of Sci. of Ukraine}%інститут 1
+	\address{1, Svientsitskii Str., Lviv 79011, Ukraine}%адреса 1
+	\email{mpk@icmp.lviv.ua}%e-mail 1
+	\email{dobush@icmp.lviv.ua}
+	\email{romanik@icmp.lviv.ua}
+
+	
+	\udk{№ УДК/UDC} \razd{\secv}
+	
+	\autorcol{O.A.\hspace*{0.7mm}Dobush, M.P.\hspace*{0.7mm}Kozlovskii, R.V.\hspace*{0.7mm}Romanik, I.V.\hspace*{0.7mm}Pylyuk}%
+	
+	\setcounter{page}{1}%
+	
+	\begin{abstract}
+		A cell fluid model with a modified Morse potential is studied. The supercritical states are considered with respect to the possibility of building a separation boundary between liquid-like and gas-like behaviors. Three different lines are calculated that can be used for this purpose: the locus of the isothermal compressibility maxima, the locus of the thermal expansion coefficient maxima, and the line where the effective chemical potential is zero, $M=0$. By the symmetry of the functionals for the partition functions, the condition $M=0$ in fluids is analogous to the absence of an external field in the Ising model.
+	\end{abstract}
+	
+	\keywords{Cell fluid model, Morse potential, Supercritical region, Widom line}
+	
+	\maketitle
+	
+	\input{./paper_text.tex}
+	%\bibliographystyle{gost2008}
+	%\bibliography{extracted}
+	%\bibliography{extracted}
+		
+	\vspace*{-5mm}\rezume{%Резюме укр. мовою
+		О.А.~Добуш, М.П.~Козловський, Р.В.~Романік}{Надкритичні лінії переходу в комірковій моделі плину}{Продовжується дослідження коміркової моделі плину з модифікованим потенціалом Морзе. Надкритичні стани розглядаються з огляду на можливість побудови межі розділення між рідиноподібними та газоподібними поведінками. Розраховано три різні лінії, які можна використовувати для цієї мети: лінія максимумів ізотермічної стисливості, лінія максимумів коефіцієнта теплового розширення та лінія, де ефективний хімічний потенціал дорівнює нулю, $M=0$. За симетрією функціоналів статистичних сум умова $M=0$ у рідинах аналогічна відсутності зовнішнього поля в моделі Ізінга.}{\textit{К\,л\,ю\,ч\,о\,в\,і\, с\,л\,о\,в\,а:} коміркова модель, потенціал Морзе, надкритична область, лінія Відома.}
+	
+\end{document}
